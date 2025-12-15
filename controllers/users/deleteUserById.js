@@ -4,8 +4,6 @@ const { idValidation } = require("../../validation/userDetailsValidation");
 const deleteUserById = async (req, res) => {
   try {
     const { id } = req.body;
-
-    
     const { error } = idValidation.validate(
       {
         id,
@@ -49,3 +47,4 @@ const deleteUserById = async (req, res) => {
 };
 
 module.exports = deleteUserById;
+
